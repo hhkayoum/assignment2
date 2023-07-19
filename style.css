@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Work+Sans:wght@400;600;700;800&display=swap');
+
 *{
        margin: 0;
        padding: 0;
+}
+body{
+       font-family: 'Open Sans', sans-serif;
+       font-family: 'Work Sans', sans-serif;
 }
 /* nav section style start */
 .nav-section{
@@ -126,7 +132,7 @@
        display: flex;
        justify-content: space-between;
        align-items: center;
-       gap: 20px;
+       gap: 30px;
 }
 .card4{
        position: relative;
@@ -165,7 +171,7 @@
 }
 .card>p{
        color: #534C64;
-       font-size: 20px;
+       font-size: 16px;
        font-weight: 500;
        line-height: 30px; 
 }
