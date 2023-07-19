@@ -49,19 +49,22 @@
        background-image: url('./images/Group\ 14.png');
        background-repeat: no-repeat;
        background-position:start;
-       min-height: 600px;
+       min-height: 700px;
 }
 .banner{
        display: flex;
        justify-content: space-between;
        align-items: center;
-       gap: 40px;
        max-width: 1300px;
+       min-height: 700px;
        margin: 0 auto;
+       flex: 1;
+       gap: 40px;
 }
-.banner-content{
-
-}
+.banner-img{
+       width: 50%;
+}   
+      
 .banner-img img{
        width: 100%;
 }
@@ -82,6 +85,7 @@
        font-size: 20px;
        font-weight: 500;
        padding-top: 1rem;
+
 }
 .btn{
        padding: 21px 40px;
@@ -132,7 +136,7 @@
        color: #FF42A5 ;
 
 }
-.games-item p:hover{
+.games-item:hover p{
        color: #FF42A5 ;
 }
 /* footer section start */
@@ -209,7 +213,7 @@ footer{
        display: flex;
        align-items: center;
        gap: 70px;
-       margin: 50px auto;
+       margin: 100px auto;
        max-width: 1300px;
 }
 .special-img{
@@ -244,19 +248,94 @@ footer{
        line-height: 30px
 }
 
+/* card section */
+
+
+.titel-container{
+       text-align: center;
+       padding: 30px;
+       margin-top: 80px;
+}
+
+.titel-container h1{
+       color: #0B0223;
+       font-size: 48px;
+       font-weight: 700;
+}
+.titel-container p{
+       color: #534C64;
+       font-size: 18px;
+       font-weight: 400;
+       padding: 16px;
+}
+.card-container{
+       max-width: 1300px;
+       margin: 30px auto 100px auto;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       gap: 20px;
+}
+.card4{
+       position: relative;
+}
+.card4 img{
+       position: relative;
+}
+.play-icon{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       width: 35%;
+       height: 35%;
+       position: absolute;
+       top: 30%;
+       left: 30%;
+       opacity: 0;
+}
+.card4:hover .play-icon{
+       opacity: 1;
+}
+.card4:hover>img{
+       opacity: 0.4;
+}
+
+
+.play-icon p{
+       color: red;
+}
+.card img{
+       width: 100%;
+}
+.play-icon img{
+       width: 50px;
+      background-color: white;
+      border-radius: 50%;
+}
+.card>p{
+       color: #534C64;
+       font-size: 20px;
+       font-weight: 500;
+       line-height: 30px; 
+}
+
 
 /* mobile responsive */
 @media screen and (max-width:576px) {
-       .nav-section,.nav-items,.special-sec-container{
+       .nav-section,.nav-items,.card-container{
               flex-direction: column;
               margin: 10px;
-              gap: 30px;
+              gap: 20px;
        }
        .games-container{
               display: grid;
               grid-template-columns: repeat(3,1fr);
               gap: 8px;
               width: 90%;
+       }
+       .banner-img{
+              width: 100%;
        }
        .banner{
               flex-direction: column-reverse;
@@ -305,7 +384,27 @@ footer{
        }
        .special-img{
               width: 90%;
-              margin: 50px 0;
+              margin: 10px 0;
+       }
+       .card-container{
+              margin-bottom: 70px;
+       }
+       .special-sec-container{
+              flex-direction: column-reverse;
        }
 
+}
+@media screen and (min-width:576px) and (max-width:768px)  {
+       header,main{
+              padding: 20px;
+       }
+       .card-container{
+              flex-wrap: wrap;
+       }
+       .nav-section{
+              flex-direction: column;
+       }
+       .nav-items{
+              margin-top: 30px;
+       }
 }
